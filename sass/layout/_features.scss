@@ -1,0 +1,39 @@
+.features {
+      @extend %section;
+      padding-bottom: 0;
+  }
+  
+  .features-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .features-item {
+    width: 270px;
+  }
+  
+  .features-picture {
+    display: flex;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: var(--background-color-gray);
+    border-radius: 4px;
+  }
+  
+  .features-title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    margin-bottom: 10px;
+  }
+  
+  .features-text {
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }

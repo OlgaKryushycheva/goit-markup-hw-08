@@ -1,0 +1,34 @@
+.about {
+  @extend %section;
+}
+
+.about__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .about__img {
+    position: relative;
+  }
+  
+  .about__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 79px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  
+  .about__text {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--contrast-color);
+  }

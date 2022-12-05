@@ -1,0 +1,37 @@
+.clients {
+  @extend %section;
+
+  .clients__logo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+
+    background-color: var(--background-color-main);
+    color: var(--icon-color);
+
+    transition-property: color, border;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+
+  .clients__icon {
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}
