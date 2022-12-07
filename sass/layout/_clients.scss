@@ -5,6 +5,9 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
   }
 
   .clients__link {
@@ -14,7 +17,8 @@
 
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    width: 170px;
+
+   min-width: 210px;
     height: 92px;
 
     background-color: var(--background-color-main);
@@ -23,6 +27,14 @@
     transition-property: color, border;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    @media screen and (min-width: 768px) {
+      min-width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-width: 170px;
+    }
   }
 
   .clients__icon {

@@ -3,27 +3,62 @@
   padding-bottom: 60px;
 
   background-color: var(--background-color-black);
+
+  
 }
 
 .footer-items {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 768px) and  (max-width: 1199px) {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  // @media screen and (min-width: 1200px) {
+  //   flex-direction: row;
+  //   align-items: baseline;
+  // }
 }
 
 .address-items {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 28px;
   min-width: 231px;
-  margin-right: 70px;
+
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin-right: 70px;
+  }
 }
 
 .address-footer {
   display: flex;
   flex-direction: column;
   gap: 9px;
-
+  align-items: center;
   font-style: normal;
+
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .sity {
@@ -56,11 +91,25 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-width: 583px; 
+  }
+ 
+
 }
 
 .footer-form-subscription {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+  }
 }
 
 .subscription {
@@ -68,13 +117,18 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 
   color: var(--contrast-color);
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .subscription-email {
   display: block;
-  width: 358px;
+  min-width: 450px;
   height: 50px;
   padding-left: 16px;
   outline: unset;
@@ -88,27 +142,31 @@
 
   transition: border-color var(--duration) var(--timing-function);
 
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
 
-&::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
-  color: rgba(255, 255, 255, 0.6);
-}
+  &:focus {
+    border-color: var(--accent-color);
+  }
 
-&:focus {
-  border-color: var(--accent-color);
-}
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
 }
 
 .subscription-form-button {
   position: relative;
 
   width: 200px;
+  height: 50px;
 
   font-weight: 700;
   font-size: 16px;
@@ -136,39 +194,37 @@
   padding-left: 28px;
   padding-right: 28px;
 
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--contrast-color);
+    border: 1px solid var(--accent-color);
+  }
 
-&:hover,
-&:focus {
-  color: var(--accent-color);
-  background-color: var(--contrast-color);
-  border: 1px solid var(--accent-color);
-}
+  .subscription-form-icon {
+    fill: currentColor;
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    opacity: 1;
+  }
 
-.subscription-form-icon {
-  fill: currentColor;
-  position: absolute;
-  top: 13px;
-  right: 28px;
-  opacity: 1;
-}
+  &:focus .subscription-form-icon {
+    transform: translate(100px, -60px);
+    opacity: 0;
+    transition: transform 300ms ease-out, opacity 300ms var(--timing-function) 100ms;
+  }
 
-&:focus .subscription-form-icon {
-  transform: translate(100px, -60px);
-  opacity: 0;
-  transition: transform 300ms ease-out, opacity 300ms var(--timing-function) 100ms;
-}
+  .subscription-form-button-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+  }
 
-.subscription-form-button-text {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-65%, -50%);
-}
-
-&:focus .subscription-form-button-text {
-  transform: translate(-50%, -50%);
-  transition: transform 300ms ease-out;
-}
-
+  &:focus .subscription-form-button-text {
+    transform: translate(-50%, -50%);
+    transition: transform 300ms ease-out;
+  }
 }

@@ -1,14 +1,14 @@
 // Хедер
 .logo {
   display: block;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
+  font-size: 24px;
+  line-height: 1.08;
   color: var(--logo-color-header);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
 
   transition: color var(--duration) var(--timing-function);
 
@@ -20,10 +20,23 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 // Футер
 .footer-logo {
   margin-right: 0;
   color: var(--contrast-color);
+  padding-top: 0;
+  padding-bottom: 0;
 }

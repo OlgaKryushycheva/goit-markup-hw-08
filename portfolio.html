@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
 
-    <!-- fonts -->
+    <!-- Шрифти -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
 
-    <!-- normolize -->
+    <!-- Нормолайз -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -23,12 +23,12 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- base styles -->
+    <!-- Базові стилі -->
     <link rel="stylesheet" href="./css/main.min.css" />
-     </head>
+  </head>
 
   <body>
-    <!--heder-->
+    <!-- Хедер -->
     <header class="header">
       <div class="container">
         <nav class="header-nav">
@@ -42,7 +42,7 @@
 
         <ul class="contact-heder">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="link header-contact">
+            <a href="mailto:info@devstudio.com" class="link-contact">
               <svg class="header-icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
@@ -50,7 +50,7 @@
             >
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="link header-contact">
+            <a href="tel:+380961111111" class="link-contact">
               <svg class="header-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -58,11 +58,18 @@
             >
           </li>
         </ul>
+
+        <!-- Кнопка мобільного меню -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <!--Наші роботи, сховати-->
+      <!-- Наші роботи -->
       <section class="portfolio">
         <div class="container">
           <h1 class="visually-hidden">Наші роботи</h1>
@@ -276,11 +283,39 @@
       </section>
     </main>
 
-    <!--footer-->
+    <!-- Мобільне меню -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-nav">
+        <li><a href="./index.html" class="">Студія</a></li>
+        <li><a href="./portfolio.html" class="current">Портфоліо</a></li>
+        <li><a href="" class="">Контакти</a></li>
+      </ul>
+
+      <ul class="mobile-contact">
+        <li><a href="" class="tel">+38 096 111 11 11</a></li>
+        <li><a href="" class="">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-cocials">
+        <li class="mobile-cocials-list"><a href="https://www.instagram.com/">Instagram</a></li>
+        <li class="mobile-cocials-list"><a href="https://twitter.com/">Twitter</a></li>
+        <li class="mobile-cocials-list"><a href="https://www.facebook.com/">Facebook</a></li>
+        <li class="mobile-cocials-list"><a href="https://www.linkedin.com/">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <!-- Футер -->
     <footer class="footer">
       <div class="container footer-items">
         <div class="address-items">
-          <a href="./index.html" class="logo footer-logo" lang="en"> <span class="accent">Web</span>Studio</a>
+          <a href="./index.html" class="logo footer-logo" lang="en">
+            <span class="accent">Web</span>Studio</a
+          >
           <address>
             <ul class="address-footer">
               <li><a href="" class="sity">м. Київ, пр-т Лесі Українки, 26</a></li>
@@ -377,5 +412,14 @@
         </div>
       </div>
     </footer>
+
+    <!-- Скрипт мобільного меню -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

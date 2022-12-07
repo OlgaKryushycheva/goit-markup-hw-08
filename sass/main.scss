@@ -4,7 +4,6 @@
 @import './utils/placeholders';
 @import './utils/animation';
 
-
 // Базовые стили
 @import './base/base';
 @import './base/reset';
@@ -16,6 +15,7 @@
 @import './components/logo';
 @import './components/cocials';
 @import './components/modal';
+@import './components/menu';
 
 // Секции
 @import './layout/about';
@@ -26,6 +26,3 @@
 @import './layout/hero';
 @import './layout/portfolio';
 @import './layout/team';
-
-
-
