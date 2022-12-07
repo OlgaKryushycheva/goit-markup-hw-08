@@ -1,6 +1,5 @@
 .features {
-  @extend %section;
-  padding-bottom: 0;
+  @include section(94px, 0);
 }
 
 .features-list {

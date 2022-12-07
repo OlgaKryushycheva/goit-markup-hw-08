@@ -1,5 +1,5 @@
 .clients {
-  @extend %section;
+  @include section();
 
   .clients__logo {
     display: flex;

@@ -1,8 +1,10 @@
 // Утилиты
 @import './utils/variables.scss';
 @import './utils/visually-hidden';
-@import './utils/placeholders';
+@import './utils/mixins';
 @import './utils/animation';
+
+
 
 // Базовые стили
 @import './base/base';
