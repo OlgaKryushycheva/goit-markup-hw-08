@@ -1,5 +1,5 @@
 .about {
-  @include section();
+  @include section(0, 94px); 
 
   @media screen and (max-width: 1199px) {
     display: none;

@@ -88,13 +88,18 @@
   display: none;
 
   @media screen and (min-width: 768px) {
-    display: block;
+    display: flex;
+  
+    gap: 10px;
+    flex-direction: column;
     margin-left: auto;
     color: var(--paragraf-text-color);
     transition: color var(--duration) var(--timing-function);
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
+   
+    flex-direction: row;
+    gap: 30px;
   }
 
   .link-contact {
@@ -102,10 +107,7 @@
     align-items: center;
     gap: 10px;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    font-weight: 500;
+        font-weight: 500;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.02em;
@@ -115,17 +117,11 @@
       line-height: 1.14;
       padding-top: 32px;
       padding-bottom: 32px;
+     
     }
   }
 
-  .item + .item {
-    margin-left: 0;
-
-    @media screen and (min-width: 1200px) {
-      margin-left: 30px;
-    }
-  }
-
+  
   .header-icon {
     fill: currentColor;
   }

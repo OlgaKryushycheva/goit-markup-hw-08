@@ -1,10 +1,7 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include section();
 
   background-color: var(--background-color-black);
-
-  
 }
 
 .footer-items {
@@ -12,21 +9,12 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: baseline;
+    justify-content: space-around;
   }
-
-  @media screen and (min-width: 768px) and  (max-width: 1199px) {
-    padding-left: 76px;
-    padding-right: 89px;
-  }
-
-  // @media screen and (min-width: 1200px) {
-  //   flex-direction: row;
-  //   align-items: baseline;
-  // }
 }
 
 .address-items {
@@ -34,15 +22,14 @@
   flex-direction: column;
   row-gap: 28px;
   min-width: 231px;
+  margin-bottom: 60px;
 
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    margin-right: 165px;
-  }
   @media screen and (min-width: 1200px) {
     align-items: flex-start;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -53,11 +40,8 @@
   align-items: center;
   font-style: normal;
 
-  margin-bottom: 60px;
-
   @media screen and (min-width: 1200px) {
     align-items: flex-start;
-    margin-bottom: 0;
   }
 }
 
@@ -91,12 +75,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    min-width: 583px; 
-  }
- 
-
 }
 
 .footer-form-subscription {
@@ -128,7 +106,7 @@
 
 .subscription-email {
   display: block;
-  min-width: 450px;
+  min-width: 290px;
   height: 50px;
   padding-left: 16px;
   outline: unset;
@@ -155,6 +133,10 @@
 
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {

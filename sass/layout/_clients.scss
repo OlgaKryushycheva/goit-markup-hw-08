@@ -1,12 +1,16 @@
 .clients {
   @include section();
 
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
+
   .clients__logo {
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: center;
-    
+
     flex-wrap: wrap;
   }
 
@@ -18,7 +22,8 @@
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 
-   min-width: 210px;
+    min-width: 290px;
+
     height: 92px;
 
     background-color: var(--background-color-main);
@@ -27,6 +32,10 @@
     transition-property: color, border;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    @media screen and (min-width: 480px) {
+      min-width: 210px;
+    }
 
     @media screen and (min-width: 768px) {
       min-width: 226px;

@@ -33,7 +33,7 @@
     }
   }
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
@@ -50,9 +50,13 @@
 }
 
 .hero-content {
-  width: 360px;
+  width: 290px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 360px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 696px;
@@ -62,12 +66,16 @@
 .hero-title {
   color: var(--contrast-color);
   font-weight: 900;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+  }
 
   @media screen and (min-width: 1200px) {
     font-size: 44px;
