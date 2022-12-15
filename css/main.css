@@ -307,7 +307,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 450px;
+  width: 95%;
   height: 609px;
   background-color: var(--background-color-main);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -322,6 +322,11 @@ img {
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -796,19 +801,35 @@ textarea.modal-form-input {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.clients .clients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
+  height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .clients .clients__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients .clients__item {
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
+  }
 }
 .clients .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -817,9 +838,6 @@ textarea.modal-form-input {
           align-items: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  min-width: 290px;
-  height: 92px;
-  background-color: var(--background-color-main);
   color: var(--icon-color);
   -webkit-transition-property: color, border;
   transition-property: color, border;
@@ -827,21 +845,6 @@ textarea.modal-form-input {
           transition-duration: var(--duration);
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
-}
-@media screen and (min-width: 480px) {
-  .clients .clients__link {
-    min-width: 210px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .clients .clients__link {
-    min-width: 226px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .clients .clients__link {
-    min-width: 170px;
-  }
 }
 .clients .clients__icon {
   fill: currentColor;
